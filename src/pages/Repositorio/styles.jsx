@@ -52,3 +52,103 @@ border: 0;
 outline: 0;
 background: transparent;
 `;
+
+export const IssuesList = styled.ul`
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+  list-style: none;
+
+  li {
+    display: flex;
+    padding: 15px 10px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+  }
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #0d2636;
+  }
+
+  div {
+    flex: 1;
+    margin-left: 10px;
+
+    p{
+        font-size: 14px;
+        margin-top: 5px;
+        color: #000;
+    }
+  }
+
+  strong {
+    font-size: 16px;
+    margin-top: 5px;
+
+    a {
+      text-decoration: none;
+      color: #222;
+        transition: color 0.2s;
+
+      &:hover {
+        color: #0071db;
+      }
+    }
+
+    span {
+        background: #222;
+        color: #fff;
+        border-radius: 4px;
+        padding: 4px 5px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+  }
+`;
+
+export const PageActions = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button{
+        outline: 0;
+        border: 0;
+        background: #222;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 4px;
+
+
+        &:disabled{
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    }
+`
+
+
+export const FillterLists = styled.div`
+margin:15px 0;
+
+button{
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    border-radius:4px;
+    margin:0px 3px;
+
+
+    &:nth-child(${props=>props.active + 1}){
+        background: #0071db;
+        color: #fff;
+    }
+}
+`
